@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - CyberShield</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-mode">
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar-glass fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold brand-font bg-gradient-to-r from-[#00E5FF] to-[#FF00D4] bg-clip-text text-transparent">
+                        CyberShield
+                    </a>
+                </div>
+                <div class="hidden lg:flex items-center space-x-6 xl:space-x-8">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="services.html" class="nav-link">Services</a>
+                    <a href="products.html" class="nav-link">Products</a>
+                    <a href="case-studies.html" class="nav-link">Case Studies</a>
+                    <a href="blog.html" class="nav-link">Blog</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                    <a href="careers.html" class="nav-link">Careers</a>
+                    <a href="register.html" class="btn-secondary-small">Sign Up</a>
+                    <a href="login.html" class="nav-link">Login</a>
+                </div>
+                <button id="mobile-menu-btn" class="lg:hidden text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden lg:hidden bg-[#1A1A1A] border-t border-gray-800">
+            <div class="px-4 py-4 space-y-3">
+                <a href="index.html" class="block nav-link">Home</a>
+                <a href="about.html" class="block nav-link">About</a>
+                <a href="services.html" class="block nav-link">Services</a>
+                <a href="products.html" class="block nav-link">Products</a>
+                <a href="case-studies.html" class="block nav-link">Case Studies</a>
+                <a href="blog.html" class="block nav-link">Blog</a>
+                <a href="contact.html" class="block nav-link">Contact</a>
+                <a href="careers.html" class="block nav-link">Careers</a>
+                <div class="flex items-center justify-center gap-3 pt-2">
+                    <a href="register.html" class="btn-secondary-small">Sign Up</a>
+                    <a href="login.html" class="block nav-link">Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Register Section with Glassmorphism -->
+    <section class="min-h-screen flex items-center justify-center pt-20 pb-20 bg-gradient-to-br from-[#0F0F0F] via-[#1A1A1A] to-[#0F0F0F]">
+        <div class="absolute inset-0">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-[#00E5FF] opacity-10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-[#FF00D4] opacity-10 rounded-full blur-3xl"></div>
+        </div>
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-md mx-auto">
+                <div class="glass-card p-8 md:p-12 rounded-3xl">
+                    <div class="text-center mb-8">
+                        <h1 class="text-3xl md:text-4xl font-bold mb-2 text-white">Create Account</h1>
+                        <p class="text-gray-400">Join CyberShield and secure your digital future</p>
+                    </div>
+                    <form id="register-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
+                            <input type="text" id="name" name="name" required class="form-input" placeholder="John Doe">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" required class="form-input" placeholder="you@example.com">
+                        </div>
+                        <div>
+                            <label for="company" class="block text-sm font-medium text-gray-300 mb-2">Company (Optional)</label>
+                            <input type="text" id="company" name="company" class="form-input" placeholder="Your Company">
+                        </div>
+                        <div>
+                            <label for="password" class="block text-sm font-medium text-gray-300 mb-2">Password</label>
+                            <input type="password" id="password" name="password" required class="form-input" placeholder="••••••••">
+                            <p class="text-xs text-gray-400 mt-1">Must be at least 8 characters</p>
+                        </div>
+                        <div>
+                            <label for="confirm-password" class="block text-sm font-medium text-gray-300 mb-2">Confirm Password</label>
+                            <input type="password" id="confirm-password" name="confirm-password" required class="form-input" placeholder="••••••••">
+                        </div>
+                        <div class="flex items-start">
+                            <input id="terms" name="terms" type="checkbox" required class="w-4 h-4 mt-1 bg-[#1A1A1A] border-gray-600 rounded focus:ring-[#00E5FF]">
+                            <label for="terms" class="ml-2 text-sm text-gray-300">
+                                I agree to the <a href="#" class="text-[#00E5FF] hover:underline">Terms of Service</a> and <a href="#" class="text-[#00E5FF] hover:underline">Privacy Policy</a>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn-primary w-full py-4 text-lg">
+                            Create Account
+                        </button>
+                        <div class="text-center">
+                            <p class="text-gray-400 text-sm">
+                                Already have an account? 
+                                <a href="login.html" class="text-[#00E5FF] hover:underline font-semibold">Sign in</a>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+
+
